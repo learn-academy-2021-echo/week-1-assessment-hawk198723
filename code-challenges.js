@@ -12,6 +12,13 @@
 var temp = 42
 // var temp = 350
 // var temp = 212
+if (temp < 212) {
+  console.log(`${temp} is below bolling point.`);
+}else if (temp >212) {
+  console.log(`${temp} is above bolling point.`);
+}else {
+  console.log(`${temp} is at bolling point.`); //which should always be 212
+}
 
 
 // --------------------2) Create the code that will combine the two arrays and return the length using the variables provided below. Expected output: 10
@@ -19,17 +26,30 @@ var temp = 42
 var myNumbers1 = [3, 7, 0, 36, -9]
 var myNumbers2 = [8, -7, 42, 9, 13]
 
+console.log(myNumbers1.concat(myNumbers2).length);
+
 
 // --------------------3) Create the code that will reverse the letters of a string using the test variable provided below. Expected output: "1202 ohcE"
 
 var currentCohort = "Echo 2021"
 
+var tempStr = currentCohort.split("");
+var reverseStr = tempStr.reverse();
+var joinReverseStr = reverseStr.join("");
+console.log(joinReverseStr);
 
 // --------------------4) Create a statement that will evaluate whether each number in an array is even or odd. Use the test variable provided below. Expected output: "odd" "even" "odd" "even" "odd" "even"
 
 var myArray = [13, 34, 5, 10, 27, 42]
 
-
+for (var i = 0; i < myArray.length; i++) {
+  if (myArray[i] % 2 === 1) {
+    myArray[i] = "odd";
+  } else {
+    myArray[i] = "even";
+  }
+}
+console.log(`${myArray}`);
 // --------------------5) Create a statement that evaluates two numbers and subtracts the smaller number from the larger number using the two sets of test variables provided below. Expected output: 42, 3
 
 var number1 = 58
@@ -37,3 +57,9 @@ var number2 = 100
 
 // var number1 = 27
 // var number2 = 24
+
+if (number1 >= number2) {
+    console.log(number1 - number2);
+}else {
+    console.log(number2 - number1);
+}
